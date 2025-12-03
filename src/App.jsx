@@ -4,7 +4,6 @@ import Hero from './components/sections/Hero.jsx';
 import About from './components/sections/About.jsx';
 import Skills from './components/sections/Skills.jsx';
 import Projects from './components/sections/Projects.jsx';
-import YouTube from './components/sections/YouTube.jsx';
 import Contact from './components/sections/Contact.jsx';
 import Footer from './components/layout/Footer.jsx';
 
@@ -32,7 +31,7 @@ const App = () => {
       <About setActiveSection={setActiveSection} />
       <Skills setActiveSection={setActiveSection} />
       <Projects setActiveSection={setActiveSection} />
-      <YouTube setActiveSection={setActiveSection} />
+
       <Contact setActiveSection={setActiveSection} />
 
       <Footer />
