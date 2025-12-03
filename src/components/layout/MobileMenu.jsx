@@ -1,6 +1,11 @@
-import { Mail, Github, Linkedin, X } from "lucide-react";
+import { Mail, Github, Linkedin, X, FileText } from 'lucide-react';
 
-const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection, setActiveSection }) => {
+const MobileMenu = ({
+  isMenuOpen,
+  setIsMenuOpen,
+  activeSection,
+  setActiveSection,
+}) => {
   const handleNavClick = (section) => {
     setActiveSection(section);
     setIsMenuOpen(false);
@@ -9,13 +14,13 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection, setActiveSection
   return (
     <div
       className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-        isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       } md:hidden`}
       onClick={() => setIsMenuOpen(false)}
     >
       <div
         className={`fixed top-0 right-0 z-50 h-full w-64 bg-white dark:bg-gray-800 shadow-xl transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
@@ -31,25 +36,36 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection, setActiveSection
               <X className="w-6 h-6" />
             </button>
           </div>
-          
+
           <nav className="flex-1 space-y-4">
             {/* Removed "youtube" from navigation */}
-            {["home", "about", "skills", "projects", "contact"].map((item) => (
+            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
                 className={`block px-4 py-3 rounded-lg transition-colors duration-200 ${
                   activeSection === item
-                    ? "bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400"
-                    : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                    ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400'
+                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
                 onClick={() => handleNavClick(item)}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
             ))}
+
+            <a
+              href="/Bhanu_Resume_3E.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 justify-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FileText size={16} />
+              Download Resume
+            </a>
           </nav>
-          
+
           <div className="mt-auto pt-6 border-t border-gray-200 dark:border-gray-700">
             <div className="flex justify-center space-x-6">
               <a

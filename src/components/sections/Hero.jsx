@@ -1,4 +1,4 @@
-import { Mail, Code, Users, Trophy, Briefcase } from 'lucide-react';
+import { Mail, Code, Users, Trophy, Briefcase, FileText } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Hero = ({ setActiveSection }) => {
@@ -154,6 +154,15 @@ const Hero = ({ setActiveSection }) => {
             >
               <Mail size={20} className="group-hover:animate-bounce" />
               Get In Touch
+            </a>{' '}
+            <a
+              href="/Bhanu_Resume_3E.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white dark:bg-gray-800 text-gray-800 dark:text-white border-2 border-gray-300 dark:border-gray-700 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:border-blue-500 dark:hover:border-blue-500"
+            >
+              <FileText size={20} className="group-hover:animate-pulse" />
+              Download Resume
             </a>
             <a
               href="#projects"

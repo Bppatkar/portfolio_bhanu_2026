@@ -108,7 +108,7 @@ const Skills = ({ setActiveSection }) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
             Technical Skills
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             Proficient in modern web technologies and frameworks
           </p>
@@ -254,7 +254,10 @@ const Skills = ({ setActiveSection }) => {
           <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-white">
               <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                <TestTube className="text-green-600 dark:text-green-400" size={24} />
+                <TestTube
+                  className="text-green-600 dark:text-green-400"
+                  size={24}
+                />
               </div>
               Testing
             </h3>

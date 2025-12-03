@@ -1,11 +1,5 @@
 import { useState } from 'react';
-import {
-  ExternalLink,
-  Github,
-  Star,
-  Linkedin,
-  Filter,
-} from 'lucide-react';
+import { ExternalLink, Github, Star, Linkedin, Filter } from 'lucide-react';
 import projectsData from '../../data/projects';
 
 // Define filter categories
@@ -104,7 +98,7 @@ const Projects = ({ setActiveSection }) => {
                       {project.image ? (
                         <div className="w-full h-full relative">
                           {/* Note: If images are in public folder, use: */}
-                          {/* <img src={project.image.replace('./', '/')} /> */}
+                          <img src={project.image.replace('./', '/')} />
                           <div className="w-full h-full bg-linear-to-br from-blue-200 to-purple-200 dark:from-blue-800/30 dark:to-purple-800/30 flex items-center justify-center">
                             <div className="text-5xl">
                               {project.category === 'react' && '⚛️'}
