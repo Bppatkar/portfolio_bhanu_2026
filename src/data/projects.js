@@ -350,6 +350,37 @@ export default [
     showPreview: true,
     showCode: true,
   },
+  {
+  title: 'Job Application Tracker Dashboard',
+  description: 'A full-stack MERN application for tracking job applications with interactive dashboard, resume management, and analytics. Features include application status tracking, file uploads, statistics visualization, and user authentication.',
+  tech: [
+    'MongoDB',
+    'Express',
+    'React',
+    'Node.js',
+    'Tailwind CSS',
+    'JWT',
+    'Vite',
+    'Recharts'
+  ],
+  features: [
+    'Interactive dashboard with statistics',
+    'Job application CRUD operations',
+    'Resume & cover letter uploads',
+    'Application status tracking (Applied/Interview/Offer/Rejected)',
+    'Data visualization with Recharts',
+    'JWT authentication & authorization',
+    'Responsive design with Tailwind CSS',
+    'File management with Multer'
+  ],
+  liveLink: 'https://job-application-tracker-dashboard-1.onrender.com',
+  codeLink: 'https://github.com/Bppatkar/Job-Application-Tracker-Dashboard',
+  linkedinLink: '#',
+  image: '/job-tracker.jpg',
+  category: 'mern',
+  showPreview: true,
+  showCode: true,
+}
 
   // ==================== NEXT.JS PROJECTS ====================
   {
