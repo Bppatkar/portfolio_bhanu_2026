@@ -380,7 +380,7 @@ export default [
   category: 'mern',
   showPreview: true,
   showCode: true,
-}
+  },
 
   // ==================== NEXT.JS PROJECTS ====================
   {
