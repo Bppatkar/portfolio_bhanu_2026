@@ -164,6 +164,38 @@
 export default [
   // ==================== MERN STACK PROJECTS ====================
   {
+    title: 'FutureBlink AI – Visual AI Orchestration Platform',
+    description:
+      'A production-deployed MERN stack AI orchestration tool that enables users to build visual logic flows, manage conversation history, and interact with AI-powered features. Features dark/light mode toggle, real-time responsiveness, and a dedicated health monitoring system.',
+    tech: [
+      'MongoDB',
+      'Express',
+      'React',
+      'Node.js',
+      'OpenRouter API',
+      'Tailwind CSS',
+      'JWT',
+      'Render Deployment',
+    ],
+    features: [
+      'Visual logic flow builder',
+      'AI conversation history management',
+      'Dark/Light mode toggle',
+      'Real-time AI orchestration via OpenRouter',
+      'Health monitoring endpoint',
+      'Production-ready deployment',
+      'Fully responsive design',
+      'CORS configured for seamless integration',
+    ],
+    liveLink: 'https://lnkd.in/gPvqWRrh',
+    codeLink: 'https://lnkd.in/gMGayJWr',
+    linkedinLink: '#',
+    image: '/futureblink.jpg',
+    category: 'mern',
+    showPreview: true,
+    showCode: true,
+  },
+{
     title: 'QuickChat – Real-Time MERN Chat Application',
     description:
       'A feature-rich real-time chat application with Socket.IO, Cloudinary image sharing, customizable profiles, online status indicators, and unread message tracking.',
