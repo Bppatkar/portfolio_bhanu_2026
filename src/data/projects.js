@@ -722,7 +722,7 @@ export default [
     linkedinLink:
       'https://www.linkedin.com/posts/bhanu-pratap-patkar_i-am-just-polishing-my-html-and-css-knowledge-activity-7134770864008409088-CGy_/',
     image: '',
-    category: '/music-production.jpg',
+    category: '/music.jpg',
     showPreview: true,
     showCode: true,
   },
