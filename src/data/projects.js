@@ -699,7 +699,7 @@ export default [
     codeLink: 'https://github.com/Bppatkar/MyPortfolio',
     linkedinLink:
       'https://www.linkedin.com/posts/bhanu-pratap-patkar_activity-7134772006469664768-qw0_/',
-    image: '',
+    image: '/old-portfolio.jpg',
     category: 'html-css',
     showPreview: true,
     showCode: true,
@@ -722,7 +722,7 @@ export default [
     linkedinLink:
       'https://www.linkedin.com/posts/bhanu-pratap-patkar_i-am-just-polishing-my-html-and-css-knowledge-activity-7134770864008409088-CGy_/',
     image: '',
-    category: 'html-css',
+    category: '/music-production.jpg',
     showPreview: true,
     showCode: true,
   },
