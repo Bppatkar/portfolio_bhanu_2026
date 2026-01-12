@@ -184,8 +184,6 @@ export default [
       'Real-time AI orchestration via OpenRouter',
       'Health monitoring endpoint',
       'Production-ready deployment',
-      'Fully responsive design',
-      'CORS configured for seamless integration',
     ],
     liveLink: 'https://futureblink-23or.onrender.com/',
     codeLink: 'https://github.com/Bppatkar/futureBlink',
