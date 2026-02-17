@@ -164,6 +164,30 @@
 export default [
   // ==================== MERN STACK PROJECTS ====================
   {
+    title: 'Eventually Consistent Form – MERN Full-Stack',
+    description:
+      'Production-deployed full-stack MERN application demonstrating distributed system patterns. Features automatic retry logic with exponential backoff, 3-layer duplicate prevention, real-time analytics dashboard, and sophisticated state machine implementation.',
+    tech: [
+      'MongoDB', 'Express.js', 'React', 'Node.js', 'Vite',
+      'Tailwind CSS', 'Render', 'Vercel', 'UUID', 'Axios'
+    ],
+    features: [
+      'Automatic retry on 503 errors (exponential backoff)',
+      '3-layer duplicate prevention',
+      '5-state finite state machine',
+      'Real-time analytics dashboard',
+      'CORS-enabled cross-domain deployment',
+      'Mock API simulation (30/40/30 distribution)'
+    ],
+    liveLink: 'https://bhumio-client.vercel.app/',
+    codeLink: 'https://github.com/Bppatkar/Bhumio-_Eventually-Consistent-Form',
+    linkedinLink: '#',
+    image: '/eventually-consistent-form.jpg',
+    category: 'mern',
+    showPreview: true,
+    showCode: true,
+  },
+  {
     title: 'FutureBlink AI – Visual AI Orchestration Platform',
     description:
       'A production-deployed MERN stack AI orchestration tool that enables users to build visual logic flows, manage conversation history, and interact with AI-powered features. Features dark/light mode toggle, real-time responsiveness, and a dedicated health monitoring system.',
