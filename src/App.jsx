@@ -6,6 +6,7 @@ import Skills from './components/sections/Skills.jsx';
 import Projects from './components/sections/Projects.jsx';
 import Contact from './components/sections/Contact.jsx';
 import Footer from './components/layout/Footer.jsx';
+import CodingStats from './components/sections/CodingStats.jsx';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -30,6 +31,7 @@ const App = () => {
       <Hero setActiveSection={setActiveSection} />
       <About setActiveSection={setActiveSection} />
       <Skills setActiveSection={setActiveSection} />
+      <CodingStats setActiveSection={setActiveSection} />
       <Projects setActiveSection={setActiveSection} />
 
       <Contact setActiveSection={setActiveSection} />
