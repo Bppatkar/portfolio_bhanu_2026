@@ -1,10 +1,10 @@
 {
   "github": {
-    "currentStreak": 16,
+    "currentStreak": 17,
     "longestStreak": 30,
     "totalContributions": "1552",
-    "publicRepos": 52,
-    "followers": 12
+    "publicRepos": 108,
+    "followers": 1
   },
   "leetcode": {
     "solved": 86,
@@ -13,5 +13,5 @@
     "hard": 1,
     "ranking": 1636373
   },
-  "lastUpdated": "2026-02-22T00:00:00Z"
+  "lastUpdated": "2026-02-22T04:01:42Z"
 }
