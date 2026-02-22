@@ -1,0 +1,78 @@
+name: Update Coding Stats
+
+on:
+  schedule:
+    # Runs every 2 weeks (1st and 15th of each month at midnight UTC)
+    - cron: '0 0 1,15 * *'
+  workflow_dispatch: # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub + LeetCode stats
+        run: |
+          # ── GitHub Stats via public API (no token needed for public repos) ──
+          GH_USER="Bppatkar"
+          LC_USER="Bppatkar"
+
+          # GitHub user data
+          GH_DATA=$(curl -s "https://api.github.com/users/$GH_USER")
+          GH_REPOS=$(echo $GH_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('public_repos',0))")
+          GH_FOLLOWERS=$(echo $GH_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('followers',0))")
+
+          # GitHub contribution counts (via streak-stats API - returns JSON)
+          GH_STREAK=$(curl -s "https://github-readme-streak-stats.herokuapp.com/?user=$GH_USER&type=json" 2>/dev/null || echo '{}')
+          CURRENT_STREAK=$(echo $GH_STREAK | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('currentStreak',{}).get('length',16))" 2>/dev/null || echo "16")
+          LONGEST_STREAK=$(echo $GH_STREAK | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('longestStreak',{}).get('length',30))" 2>/dev/null || echo "30")
+          TOTAL_CONTRIBUTIONS=$(echo $GH_STREAK | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('totalContributions',{}).get('value','1552'))" 2>/dev/null || echo "1552")
+
+          # LeetCode stats via unofficial API
+          LC_DATA=$(curl -s "https://alfa-leetcode-api.onrender.com/$LC_USER" 2>/dev/null || echo '{}')
+          LC_SOLVED=$(echo $LC_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('totalSolved',86))" 2>/dev/null || echo "86")
+          LC_EASY=$(echo $LC_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('easySolved',55))" 2>/dev/null || echo "55")
+          LC_MEDIUM=$(echo $LC_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('mediumSolved',30))" 2>/dev/null || echo "30")
+          LC_HARD=$(echo $LC_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('hardSolved',1))" 2>/dev/null || echo "1")
+          LC_RANKING=$(echo $LC_DATA | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('ranking',1636373))" 2>/dev/null || echo "1636373")
+
+          # Write stats.json with timestamp
+          python3 -c "
+          import json
+          from datetime import datetime, timezone
+
+          stats = {
+            'github': {
+              'currentStreak': int('$CURRENT_STREAK'),
+              'longestStreak': int('$LONGEST_STREAK'),
+              'totalContributions': '$TOTAL_CONTRIBUTIONS',
+              'publicRepos': int('$GH_REPOS'),
+              'followers': int('$GH_FOLLOWERS'),
+            },
+            'leetcode': {
+              'solved': int('$LC_SOLVED'),
+              'easy': int('$LC_EASY'),
+              'medium': int('$LC_MEDIUM'),
+              'hard': int('$LC_HARD'),
+              'ranking': int('$LC_RANKING'),
+            },
+            'lastUpdated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+          }
+          with open('public/stats.json', 'w') as f:
+              json.dump(stats, f, indent=2)
+          print('stats.json written successfully')
+          print(json.dumps(stats, indent=2))
+          "
+
+      - name: Commit and push stats.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/stats.json
+          git diff --staged --quiet || git commit -m "chore: update coding stats [$(date +'%Y-%m-%d')]"
+          git push
