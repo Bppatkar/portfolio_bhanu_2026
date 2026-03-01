@@ -686,6 +686,26 @@ export default [
 
   // ==================== HTML/CSS & JAVASCRIPT PROJECTS ====================
   {
+    title: 'Constitution of DSA Patterns',
+    description:
+      'A strategic 4-step framework designed to identify the right algorithm before writing a single line of code. Features a pattern-recognition engine based on constraints, input/output types, and keyword triggers.',
+    tech: ['HTML', 'JavaScript', 'CSS', 'Algorithms'],
+    features: [
+      '4-Step Framework (Constraints, Input, Output, Keywords)',
+      '150+ pattern-based questions categorized',
+      'Time Complexity prediction based on constraints',
+      'Keyword-to-Pattern mapping (e.g., Kth element -> Heap)',
+    ],
+    liveLink: 'https://constitution-of-dsa.vercel.app',
+    codeLink: 'https://github.com/Bppatkar/namaste-dsa-bhanu',
+    linkedinLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7433735946245730305/?originTrackingId=eIFljyULfs2Qv%2F1sBtenJQ%3D%3D',
+    image: './Cdsa.jpg', // Ensure you move the uploaded image to this path
+    category: 'Javascript',
+    showPreview: true,
+    showCode: true,
+  },
+  ,
+  {
     title: 'Calculator App',
     description:
       'Interactive calculator application with basic and advanced mathematical operations, built with vanilla JavaScript.',
