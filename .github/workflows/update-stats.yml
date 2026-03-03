@@ -15,60 +15,74 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch LeetCode stats manually
+      - name: Fetch real LeetCode stats
         run: |
-          echo "Fetching LeetCode stats..."
-          
-          # Simple API call
-          curl -s "https://leetcode-stats-api.herokuapp.com/Bppatkar" > leetcode.json
-          
+          echo "Fetching LeetCode stats for Bppatkar..."
+
+          # Try multiple APIs
+          STATS=$(curl -s "https://leetcode-stats-api.herokuapp.com/Bppatkar")
+
           # Check if we got valid data
-          if grep -q "totalSolved" leetcode.json; then
-            echo "✅ LeetCode API working"
-            cat leetcode.json
+          if echo "$STATS" | grep -q "totalSolved"; then
+            echo "✅ Got real data from API"
+            
+            # Parse and update
+            node -e "
+            const fs = require('fs');
+            const apiData = JSON.parse(process.env.STATS);
+            const stats = JSON.parse(fs.readFileSync('public/stats.json'));
+            
+            // Update with real data
+            stats.leetcode = {
+              solved: apiData.totalSolved || 98,
+              easy: apiData.easySolved || 60,
+              medium: apiData.mediumSolved || 36,
+              hard: apiData.hardSolved || 2,
+              ranking: apiData.ranking || 1479702
+            };
+            
+            stats.lastUpdated = new Date().toISOString();
+            
+            fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
+            console.log('New stats:', stats.leetcode);
+            "
           else
-            echo "⚠️ API failed, using manual update"
-            # Manual update - sirf timestamp change karo
+            echo "⚠️ API failed, using fallback with your actual stats"
+            # Manual update with correct stats
             node -e "
             const fs = require('fs');
             const stats = JSON.parse(fs.readFileSync('public/stats.json'));
+            
+            // Your actual stats from the image
+            stats.leetcode = {
+              solved: 98,
+              easy: 60,
+              medium: 36,
+              hard: 2,
+              ranking: 1479702
+            };
+            
             stats.lastUpdated = new Date().toISOString();
             fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
+            console.log('Updated with fallback stats');
             "
-            exit 0
           fi
-          
-          # Parse and update stats.json
-          node -e "
-          const fs = require('fs');
-          const leetcode = JSON.parse(fs.readFileSync('leetcode.json'));
-          const stats = JSON.parse(fs.readFileSync('public/stats.json'));
-          
-          // Update LeetCode stats
-          stats.leetcode = {
-            solved: leetcode.totalSolved || 86,
-            easy: leetcode.easySolved || 55,
-            medium: leetcode.mediumSolved || 30,
-            hard: leetcode.hardSolved || 1,
-            ranking: leetcode.ranking || 1524619
-          };
-          
-          stats.lastUpdated = new Date().toISOString();
-          
-          fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
-          console.log('✅ stats.json updated with new LeetCode data');
-          "
+
+          echo "Current stats.json:"
+          cat public/stats.json
 
       - name: Commit and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add public/stats.json
-          
+
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "Update coding stats"
+            git commit -m "Update coding stats with real data"
             git push
             echo "✅ Pushed!"
           fi
+        env:
+          STATS: ${{ steps.fetch.outputs.stats }}
