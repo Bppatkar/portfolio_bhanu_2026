@@ -55,7 +55,7 @@ const MobileMenu = ({
             ))}
 
             <a
-              href="/Bhanu_Resume_3E.pdf"
+              href="/Bhanu_ResumeWE.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 justify-center"

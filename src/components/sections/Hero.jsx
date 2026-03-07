@@ -119,11 +119,10 @@ const Hero = ({ setActiveSection }) => {
                 Full-Stack Developer
               </span>{' '}
               with{' '}
-              <span className="font-semibold text-purple-600 dark:text-purple-400">
+              {/* <span className="font-semibold text-purple-600 dark:text-purple-400">
                 2.8+ years
-              </span>{' '}
-              of professional experience in building scalable web applications.
-              Specializing in{' '}
+              </span>{' '} */}
+              building scalable web applications. Specializing in{' '}
               <span className="font-semibold space-x-1">
                 <span className="text-blue-500 dark:text-blue-400">MERN</span>
                 <span className="text-gray-500">/</span>
@@ -156,7 +155,7 @@ const Hero = ({ setActiveSection }) => {
               Get In Touch
             </a>{' '}
             <a
-              href="/Bhanu_Resume_3E.pdf"
+              href="/Bhanu_ResumeWE.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white dark:bg-gray-800 text-gray-800 dark:text-white border-2 border-gray-300 dark:border-gray-700 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:border-blue-500 dark:hover:border-blue-500"

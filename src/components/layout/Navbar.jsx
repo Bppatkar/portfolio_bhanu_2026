@@ -21,7 +21,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         )
       )}
       <a
-        href="/Bhanu_Resume_3E.pdf"
+        href="/Bhanu_ResumeWE.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center gap-2 hover:from-blue-700 hover:to-purple-700"

@@ -29,7 +29,7 @@ const App = () => {
       />
 
       <Hero setActiveSection={setActiveSection} />
-      <About setActiveSection={setActiveSection} />
+      {/* <About setActiveSection={setActiveSection} /> */}
       <Skills setActiveSection={setActiveSection} />
       <CodingStats setActiveSection={setActiveSection} />
       <Projects setActiveSection={setActiveSection} />
