@@ -174,7 +174,8 @@ const Hero = ({ setActiveSection }) => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"> */}
+          <div className="grid grid-cols-2 gap-6 max-w-3xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
