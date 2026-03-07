@@ -34,24 +34,24 @@ const Hero = ({ setActiveSection }) => {
     const animateStats = () => {
       setTimeout(() => {
         setStats([
-          {
-            value: '2.8+',
-            label: 'Years Experience',
-            color: 'text-blue-600',
-            icon: <Briefcase className="w-6 h-6 mx-auto mb-2" />,
-          },
+          // {
+          //   value: '2.8+',
+          //   label: 'Years Experience',
+          //   color: 'text-blue-600',
+          //   icon: <Briefcase className="w-6 h-6 mx-auto mb-2" />,
+          // },
           {
             value: '10+',
             label: 'Projects Built',
             color: 'text-purple-600',
             icon: <Code className="w-6 h-6 mx-auto mb-2" />,
           },
-          {
-            value: '15+',
-            label: 'Happy Clients',
-            color: 'text-green-600',
-            icon: <Users className="w-6 h-6 mx-auto mb-2" />,
-          },
+          // {
+          //   value: '15+',
+          //   label: 'Happy Clients',
+          //   color: 'text-green-600',
+          //   icon: <Users className="w-6 h-6 mx-auto mb-2" />,
+          // },
           {
             value: '12+',
             label: 'Tech Stacks',
@@ -196,14 +196,14 @@ const Hero = ({ setActiveSection }) => {
           </div>
 
           {/* Current Status */}
-          <div className="mt-12 inline-flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 px-6 py-3 rounded-full">
+          {/* <div className="mt-12 inline-flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 px-6 py-3 rounded-full">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
             <span className="font-medium">
               Currently working at{' '}
               <span className="font-bold">GLT Pvt. Ltd.</span> as Software
               Engineer
             </span>
-          </div>
+          </div> */}
 
           {/* Scroll indicator */}
           <div className="mt-16 animate-bounce">
