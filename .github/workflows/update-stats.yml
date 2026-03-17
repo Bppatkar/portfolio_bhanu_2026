@@ -2,12 +2,12 @@ name: Update Coding Stats
 
 on:
   schedule:
-    - cron: '0 0 1,15 * *'
+    - cron: '0 0 1,15 * *'  # Runs on 1st and 15th of each month
   workflow_dispatch:
 
 jobs:
   update-stats:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
 
@@ -15,74 +15,102 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch real LeetCode stats
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch LeetCode stats
+        id: fetch-stats
         run: |
           echo "Fetching LeetCode stats for Bppatkar..."
-
-          # Try multiple APIs
-          STATS=$(curl -s "https://leetcode-stats-api.herokuapp.com/Bppatkar")
-
-          # Check if we got valid data
+          
+          # Try primary API
+          STATS=$(curl -s "https://leetcode-stats-api.herokuapp.com/Bppatkar" || echo "{}")
+          
+          # Check if API returned valid data
           if echo "$STATS" | grep -q "totalSolved"; then
-            echo "✅ Got real data from API"
-            
-            # Parse and update
-            node -e "
-            const fs = require('fs');
-            const apiData = JSON.parse(process.env.STATS);
-            const stats = JSON.parse(fs.readFileSync('public/stats.json'));
-            
-            // Update with real data
-            stats.leetcode = {
-              solved: apiData.totalSolved || 98,
-              easy: apiData.easySolved || 60,
-              medium: apiData.mediumSolved || 36,
-              hard: apiData.hardSolved || 2,
-              ranking: apiData.ranking || 1479702
-            };
-            
-            stats.lastUpdated = new Date().toISOString();
-            
-            fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
-            console.log('New stats:', stats.leetcode);
-            "
+            echo "✅ Data fetched successfully from primary API"
+            echo "stats_data=$STATS" >> $GITHUB_OUTPUT
+            echo "using_api=true" >> $GITHUB_OUTPUT
           else
-            echo "⚠️ API failed, using fallback with your actual stats"
-            # Manual update with correct stats
-            node -e "
-            const fs = require('fs');
-            const stats = JSON.parse(fs.readFileSync('public/stats.json'));
-            
-            // Your actual stats from the image
-            stats.leetcode = {
-              solved: 98,
-              easy: 60,
-              medium: 36,
-              hard: 2,
-              ranking: 1479702
-            };
-            
-            stats.lastUpdated = new Date().toISOString();
-            fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
-            console.log('Updated with fallback stats');
-            "
+            # Try alternative API
+            STATS=$(curl -s "https://leetcode-api.vercel.app/Bppatkar" || echo "{}")
+            if echo "$STATS" | grep -q "totalSolved"; then
+              echo "✅ Data fetched from alternative API"
+              echo "stats_data=$STATS" >> $GITHUB_OUTPUT
+              echo "using_api=true" >> $GITHUB_OUTPUT
+            else
+              echo "⚠️ All APIs failed, using verified fallback data"
+              echo "using_api=false" >> $GITHUB_OUTPUT
+            fi
           fi
 
-          echo "Current stats.json:"
-          cat public/stats.json
+      - name: Update stats.json
+        run: |
+          # Create public directory if it doesn't exist
+          mkdir -p public
+          
+          node << 'EOF'
+          const fs = require('fs');
+          
+          // Verified stats from your profile
+          const VERIFIED_STATS = {
+            solved: 98,
+            easy: 60,
+            medium: 36,
+            hard: 2,
+            ranking: 1479702
+          };
+          
+          let stats = { leetcode: {} };
+          
+          // Read existing file if present
+          try {
+            stats = JSON.parse(fs.readFileSync('public/stats.json', 'utf8'));
+          } catch (e) {
+            console.log('Creating new stats.json');
+          }
+          
+          // Check if we have API data
+          const useApi = process.env.USE_API === 'true';
+          const apiData = process.env.STATS_DATA ? JSON.parse(process.env.STATS_DATA) : null;
+          
+          if (useApi && apiData && apiData.totalSolved) {
+            // Update with API data
+            stats.leetcode = {
+              solved: apiData.totalSolved || VERIFIED_STATS.solved,
+              easy: apiData.easySolved || VERIFIED_STATS.easy,
+              medium: apiData.mediumSolved || VERIFIED_STATS.medium,
+              hard: apiData.hardSolved || VERIFIED_STATS.hard,
+              ranking: apiData.ranking || VERIFIED_STATS.ranking
+            };
+            console.log('✅ Updated with live API data');
+          } else {
+            // Use verified fallback data
+            stats.leetcode = VERIFIED_STATS;
+            console.log('📊 Using verified stats from your profile');
+          }
+          
+          stats.lastUpdated = new Date().toISOString();
+          stats.updatedVia = useApi ? 'api' : 'fallback';
+          
+          // Write file
+          fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
+          console.log('Stats updated:', stats.leetcode);
+          EOF
 
-      - name: Commit and push
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/stats.json
-
-          if git diff --staged --quiet; then
-            echo "No changes"
+          
+          # Check if file changed
+          if git diff --quiet public/stats.json; then
+            echo "No changes to commit"
           else
-            git commit -m "Update coding stats with real data"
+            git add public/stats.json
+            git commit -m "chore: update coding stats [skip ci]"
             git push
-            echo "✅ Pushed!"
+            echo "✅ Changes pushed successfully!"
           fi
-        env:
-          STATS: ${{ steps.fetch.outputs.stats }}
