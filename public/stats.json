@@ -7,11 +7,12 @@
     "followers": 1
   },
   "leetcode": {
-    "solved": 98,
-    "easy": 60,
-    "medium": 36,
-    "hard": 2,
-    "ranking": 1479702
+    "solved": 122,
+    "easy": 71,
+    "medium": 48,
+    "hard": 3,
+    "ranking": 1236028
   },
-  "lastUpdated": "2026-03-15T01:10:21.797Z"
+  "lastUpdated": "2026-03-17T04:15:07.158Z",
+  "updatedVia": "fallback"
 }
