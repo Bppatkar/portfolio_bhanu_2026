@@ -1,18 +1,17 @@
 {
   "github": {
-    "currentStreak": 23,
-    "longestStreak": 30,
-    "totalContributions": "1552",
-    "publicRepos": 108,
-    "followers": 1
+    "publicRepos": 112,
+    "followers": 1,
+    "totalContributions": "0",
+    "currentStreak": 0,
+    "longestStreak": 0
   },
   "leetcode": {
-    "solved": 122,
-    "easy": 71,
-    "medium": 48,
-    "hard": 3,
-    "ranking": 1236028
+    "solved": 164,
+    "easy": 86,
+    "medium": 74,
+    "hard": 4,
+    "ranking": 1001905
   },
-  "lastUpdated": "2026-07-01T02:05:03.485Z",
-  "updatedVia": "fallback"
+  "lastUpdated": "2026-07-14T08:20:41.598Z"
 }

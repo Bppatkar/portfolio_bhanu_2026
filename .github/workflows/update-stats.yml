@@ -1,116 +1,40 @@
 name: Update Coding Stats
 
 on:
-  schedule:
-    - cron: '0 0 1,15 * *'  # Runs on 1st and 15th of each month
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  update-stats:
-    runs-on: ubuntu-24.04
-    permissions:
-      contents: write
+  update:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: 22
 
-      - name: Fetch LeetCode stats
-        id: fetch-stats
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update stats
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: node scripts/update-stats.js
+
+      - name: Commit changes
         run: |
-          echo "Fetching LeetCode stats for Bppatkar..."
-          
-          # Try primary API
-          STATS=$(curl -s "https://leetcode-stats-api.herokuapp.com/Bppatkar" || echo "{}")
-          
-          # Check if API returned valid data
-          if echo "$STATS" | grep -q "totalSolved"; then
-            echo "✅ Data fetched successfully from primary API"
-            echo "stats_data=$STATS" >> $GITHUB_OUTPUT
-            echo "using_api=true" >> $GITHUB_OUTPUT
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/stats.json
+
+          if git diff --cached --quiet; then
+            echo "No changes"
           else
-            # Try alternative API
-            STATS=$(curl -s "https://leetcode-api.vercel.app/Bppatkar" || echo "{}")
-            if echo "$STATS" | grep -q "totalSolved"; then
-              echo "✅ Data fetched from alternative API"
-              echo "stats_data=$STATS" >> $GITHUB_OUTPUT
-              echo "using_api=true" >> $GITHUB_OUTPUT
-            else
-              echo "⚠️ All APIs failed, using verified fallback data"
-              echo "using_api=false" >> $GITHUB_OUTPUT
-            fi
-          fi
-
-      - name: Update stats.json
-        run: |
-          # Create public directory if it doesn't exist
-          mkdir -p public
-          
-          node << 'EOF'
-          const fs = require('fs');
-          
-          // Verified stats from your profile
-          const VERIFIED_STATS = {
-            solved: 122,
-            easy: 71,
-            medium: 48,
-            hard: 3,
-            ranking: 1236028
-          };
-          
-          let stats = { leetcode: {} };
-          
-          // Read existing file if present
-          try {
-            stats = JSON.parse(fs.readFileSync('public/stats.json', 'utf8'));
-          } catch (e) {
-            console.log('Creating new stats.json');
-          }
-          
-          // Check if we have API data
-          const useApi = process.env.USE_API === 'true';
-          const apiData = process.env.STATS_DATA ? JSON.parse(process.env.STATS_DATA) : null;
-          
-          if (useApi && apiData && apiData.totalSolved) {
-            // Update with API data
-            stats.leetcode = {
-              solved: apiData.totalSolved || VERIFIED_STATS.solved,
-              easy: apiData.easySolved || VERIFIED_STATS.easy,
-              medium: apiData.mediumSolved || VERIFIED_STATS.medium,
-              hard: apiData.hardSolved || VERIFIED_STATS.hard,
-              ranking: apiData.ranking || VERIFIED_STATS.ranking
-            };
-            console.log('✅ Updated with live API data');
-          } else {
-            // Use verified fallback data
-            stats.leetcode = VERIFIED_STATS;
-            console.log('📊 Using verified stats from your profile');
-          }
-          
-          stats.lastUpdated = new Date().toISOString();
-          stats.updatedVia = useApi ? 'api' : 'fallback';
-          
-          // Write file
-          fs.writeFileSync('public/stats.json', JSON.stringify(stats, null, 2));
-          console.log('Stats updated:', stats.leetcode);
-          EOF
-
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Check if file changed
-          if git diff --quiet public/stats.json; then
-            echo "No changes to commit"
-          else
-            git add public/stats.json
-            git commit -m "chore: update coding stats [skip ci]"
+            git commit -m "chore: update coding stats"
             git push
-            echo "✅ Changes pushed successfully!"
           fi
