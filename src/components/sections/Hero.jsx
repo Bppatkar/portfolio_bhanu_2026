@@ -155,7 +155,7 @@ const Hero = ({ setActiveSection }) => {
               Get In Touch
             </a>{' '}
             <a
-              href="/Bhanu_ResumeWE.pdf"
+              href="/Bhanu_Resume_2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white dark:bg-gray-800 text-gray-800 dark:text-white border-2 border-gray-300 dark:border-gray-700 px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:border-blue-500 dark:hover:border-blue-500"
