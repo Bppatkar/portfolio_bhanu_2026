@@ -164,6 +164,53 @@
 export default [
   // ==================== MERN STACK PROJECTS ====================
   {
+    title: 'SocialSphere – Production Ready Social Media Platform',
+    description:
+      'A production-grade full-stack social media platform built with Next.js, TypeScript and the MERN stack. Features scalable architecture, real-time notifications, secure authentication, Redis caching, Dockerized deployment, CI/CD and AWS production hosting.',
+
+    tech: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Redis',
+      'Socket.IO',
+      'Docker',
+      'AWS EC2',
+      'Nginx',
+      'PM2',
+      'GitHub Actions',
+      'Tailwind CSS',
+      'Redux Toolkit',
+      'RTK Query',
+      'Cloudinary'
+    ],
+
+    features: [
+      'JWT Authentication with Access & Refresh Tokens',
+      'Role Based Access Control (RBAC)',
+      '25+ REST APIs',
+      'Real-time Notifications using Socket.IO',
+      'Redis Caching',
+      'Dockerized Frontend & Backend',
+      'AWS EC2 + Nginx + PM2 Deployment',
+      'GitHub Actions CI/CD',
+      'Swagger API Documentation',
+      'Jest & Supertest Testing',
+      'Responsive UI with Next.js'
+    ],
+
+    liveLink: 'https://social-mediaclient.vercel.app/',
+    codeLink: 'https://github.com/Bppatkar/social_media',
+    linkedinLink: '#',
+    image: '/socialsphere.jpg',
+    category: 'mern',
+    showPreview: true,
+    showCode: true,
+  },
+  {
     title: 'Eventually Consistent Form – MERN Full-Stack',
     description:
       'Production-deployed full-stack MERN application demonstrating distributed system patterns. Features automatic retry logic with exponential backoff, 3-layer duplicate prevention, real-time analytics dashboard, and sophisticated state machine implementation.',

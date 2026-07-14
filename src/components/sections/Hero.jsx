@@ -41,7 +41,7 @@ const Hero = ({ setActiveSection }) => {
           //   icon: <Briefcase className="w-6 h-6 mx-auto mb-2" />,
           // },
           {
-            value: '10+',
+            value: '20+',
             label: 'Projects Built',
             color: 'text-purple-600',
             icon: <Code className="w-6 h-6 mx-auto mb-2" />,
@@ -53,7 +53,7 @@ const Hero = ({ setActiveSection }) => {
           //   icon: <Users className="w-6 h-6 mx-auto mb-2" />,
           // },
           {
-            value: '12+',
+            value: '18+',
             label: 'Tech Stacks',
             color: 'text-orange-600',
             icon: <Trophy className="w-6 h-6 mx-auto mb-2" />,
