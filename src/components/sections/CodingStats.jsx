@@ -403,32 +403,16 @@ const CodingStats = ({ setActiveSection }) => {
                   <Activity className="w-3 h-3" /> Recent Submissions
                 </p>
                 <div className="space-y-2">
-                  {[
-                    {
-                      name: 'Peak Index in a Mountain...',
-                      status: 'Accepted',
-                      lang: 'JavaScript',
-                    },
-                    {
-                      name: 'Find First and Last Pos...',
-                      status: 'Accepted',
-                      lang: 'JavaScript',
-                    },
-                    {
-                      name: 'Find First and Last Pos...',
-                      status: 'Accepted',
-                      lang: 'JavaScript',
-                    },
-                  ].map((sub, i) => (
+                  {(lc?.recentSubmissions || []).map((sub, i) => (
                     <div
                       key={i}
                       className="flex items-center justify-between text-xs bg-gray-50 dark:bg-gray-800 rounded-lg px-3 py-2 border border-gray-200 dark:border-gray-700"
                     >
                       <span className="text-gray-700 dark:text-gray-300 truncate max-w-[50%]">
-                        {sub.name}
+                        {sub.title}
                       </span>
                       <span className="text-green-500 font-semibold">
-                        {sub.status}
+                        {sub.statusDisplay}
                       </span>
                       <span className="text-gray-400">{sub.lang}</span>
                     </div>

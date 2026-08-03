@@ -56,8 +56,6 @@ async function fetchGithubStats() {
   };
 }
 
-
-
 async function fetchLeetcodeStats() {
 
   const query = `
@@ -117,6 +115,8 @@ async function fetchLeetcodeStats() {
   );
 
 
+  const recentSubmissions = await fetchRecentSubmissions();
+
   return {
     solved: solved.count,
     easy: easy.count,
@@ -124,10 +124,34 @@ async function fetchLeetcodeStats() {
     hard: hard.count,
     ranking:
       data.data.matchedUser.profile.ranking,
+    recentSubmissions,
   };
 }
 
+async function fetchRecentSubmissions() {
+  const query = `
+  query recentSubmissions($username: String!) {
+    recentSubmissionList(username: $username) {
+      title
+      statusDisplay
+      lang
+      timestamp
+    }
+  }
+  `;
 
+  const response = await fetch("https://leetcode.com/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query,
+      variables: { username: LEETCODE_USERNAME },
+    }),
+  });
+
+  const data = await response.json();
+  return (data.data.recentSubmissionList || []).slice(0, 3);
+}
 
 async function updateStats() {
 
