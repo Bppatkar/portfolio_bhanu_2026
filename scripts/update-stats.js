@@ -19,10 +19,22 @@ async function githubGraphQL(query, variables, token) {
     },
     body: JSON.stringify({ query, variables }),
   });
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`GitHub GraphQL HTTP ${response.status}: ${text}`);
+  }
+
   const json = await response.json();
+
   if (json.errors) {
     throw new Error(JSON.stringify(json.errors));
   }
+
+  if (!json.data) {
+    throw new Error(`GitHub GraphQL returned no data: ${JSON.stringify(json)}`);
+  }
+
   return json.data;
 }
 
