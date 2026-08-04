@@ -1,8 +1,15 @@
 {
   "github": {
-    "totalContributions": "0",
-    "currentStreak": 0,
-    "longestStreak": 0
+    "publicRepos": 112,
+    "followers": 2,
+    "currentStreak": 3,
+    "longestStreak": 56,
+    "yearlyContributions": {
+      "2023": 37,
+      "2024": 222,
+      "2025": 1380,
+      "2026": 601
+    }
   },
   "leetcode": {
     "solved": 169,
@@ -29,7 +36,12 @@
         "lang": "javascript",
         "timestamp": "1785755138"
       }
-    ]
+    ],
+    "totals": {
+      "easy": 958,
+      "medium": 2095,
+      "hard": 960
+    }
   },
-  "lastUpdated": "2026-08-04T03:14:58.118Z"
+  "lastUpdated": "2026-08-04T03:39:53.134Z"
 }
