@@ -5,11 +5,31 @@
     "longestStreak": 0
   },
   "leetcode": {
-    "solved": 165,
+    "solved": 169,
     "easy": 87,
-    "medium": 74,
-    "hard": 4,
-    "ranking": 1003602
+    "medium": 76,
+    "hard": 6,
+    "ranking": 1001252,
+    "recentSubmissions": [
+      {
+        "title": "First Missing Positive",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1785762913"
+      },
+      {
+        "title": "Find the Duplicate Number",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1785755358"
+      },
+      {
+        "title": "Find the Duplicate Number",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1785755138"
+      }
+    ]
   },
-  "lastUpdated": "2026-07-15T12:51:13.859Z"
+  "lastUpdated": "2026-08-04T03:14:58.118Z"
 }
