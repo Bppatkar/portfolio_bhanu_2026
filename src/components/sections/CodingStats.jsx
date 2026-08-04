@@ -13,14 +13,8 @@ import {
 const GITHUB_USER = 'Bppatkar';
 const LEETCODE_USER = 'Bppatkar';
 
-const YEARLY_CONTRIBUTIONS = { 2026: 1552, 2025: 1380, 2024: 222, 2023: 37 };
-
-// LC totals — platform totals, not your solved count (these grow slowly)
-
-const LC_TOTALS = { easy: 929, medium: 2019, hard: 912 };
-
 const CodingStats = ({ setActiveSection }) => {
-  const [ghYear, setGhYear] = useState('2026');
+  const [ghYear, setGhYear] = useState(null);
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -31,6 +25,11 @@ const CodingStats = ({ setActiveSection }) => {
       .then((data) => {
         setStats(data);
         setLastUpdated(data.lastUpdated);
+        setGhYear(
+          Object.keys(data.github?.yearlyContributions || {}).sort(
+            (a, b) => b - a
+          )[0] || null
+        );
         setLoading(false);
       })
       .catch(() => {
@@ -55,15 +54,13 @@ const CodingStats = ({ setActiveSection }) => {
 
   const gh = stats?.github;
   const lc = stats?.leetcode;
+  const lcTotals = lc?.totals || { easy: 1, medium: 1, hard: 1 };
   const lcTotal = (lc?.easy || 0) + (lc?.medium || 0) + (lc?.hard || 0);
-  const lcPercent = lc
-    ? (
-        (lcTotal / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) *
-        100
-      ).toFixed(1)
-    : '0';
+  const lcGrandTotal = lcTotals.easy + lcTotals.medium + lcTotals.hard;
+  const lcPercent = lc ? ((lcTotal / lcGrandTotal) * 100).toFixed(1) : '0';
 
-  const ghYears = ['2026', '2025', '2024', '2023'];
+  const yearlyContributions = gh?.yearlyContributions || {};
+  const ghYears = Object.keys(yearlyContributions).sort((a, b) => b - a);
 
   const Skeleton = ({ className }) => (
     <div
@@ -174,8 +171,8 @@ const CodingStats = ({ setActiveSection }) => {
 
               {/* Yearly counts */}
               <div className="grid grid-cols-4 gap-2 mb-5">
-                {Object.entries(YEARLY_CONTRIBUTIONS)
-                  .reverse()
+                {Object.entries(yearlyContributions)
+                  .sort((a, b) => b[0] - a[0])
                   .map(([year, count]) => (
                     <div
                       key={year}
@@ -263,7 +260,7 @@ const CodingStats = ({ setActiveSection }) => {
                           fill="none"
                           strokeWidth="3"
                           stroke="#22c55e"
-                          strokeDasharray={`${(lc.easy / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) * 100} 100`}
+                          strokeDasharray={`${(lc.easy / lcGrandTotal) * 100} 100`}
                         />
                         <circle
                           cx="18"
@@ -272,8 +269,8 @@ const CodingStats = ({ setActiveSection }) => {
                           fill="none"
                           strokeWidth="3"
                           stroke="#eab308"
-                          strokeDasharray={`${(lc.medium / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) * 100} 100`}
-                          strokeDashoffset={`${-(lc.easy / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) * 100}`}
+                          strokeDasharray={`${(lc.medium / lcGrandTotal) * 100} 100`}
+                          strokeDashoffset={`${-(lc.easy / lcGrandTotal) * 100}`}
                         />
                         <circle
                           cx="18"
@@ -282,8 +279,8 @@ const CodingStats = ({ setActiveSection }) => {
                           fill="none"
                           strokeWidth="3"
                           stroke="#ef4444"
-                          strokeDasharray={`${(lc.hard / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) * 100} 100`}
-                          strokeDashoffset={`${-((lc.easy + lc.medium) / (LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard)) * 100}`}
+                          strokeDasharray={`${(lc.hard / lcGrandTotal) * 100} 100`}
+                          strokeDashoffset={`${-((lc.easy + lc.medium) / lcGrandTotal) * 100}`}
                         />
                       </svg>
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -310,7 +307,7 @@ const CodingStats = ({ setActiveSection }) => {
                       {
                         label: 'Easy',
                         val: lc.easy,
-                        total: LC_TOTALS.easy,
+                        total: lcTotals.easy,
                         dot: 'bg-green-500',
                         text: 'text-green-600 dark:text-green-400',
                         bar: 'bg-green-500',
@@ -318,7 +315,7 @@ const CodingStats = ({ setActiveSection }) => {
                       {
                         label: 'Medium',
                         val: lc.medium,
-                        total: LC_TOTALS.medium,
+                        total: lcTotals.medium,
                         dot: 'bg-yellow-500',
                         text: 'text-yellow-600 dark:text-yellow-400',
                         bar: 'bg-yellow-500',
@@ -326,7 +323,7 @@ const CodingStats = ({ setActiveSection }) => {
                       {
                         label: 'Hard',
                         val: lc.hard,
-                        total: LC_TOTALS.hard,
+                        total: lcTotals.hard,
                         dot: 'bg-red-500',
                         text: 'text-red-600 dark:text-red-400',
                         bar: 'bg-red-500',
@@ -384,8 +381,7 @@ const CodingStats = ({ setActiveSection }) => {
                     <Skeleton className="h-3 w-20" />
                   ) : (
                     <span className="font-bold text-orange-500">
-                      {lc?.solved} /{' '}
-                      {LC_TOTALS.easy + LC_TOTALS.medium + LC_TOTALS.hard}
+                      {lc?.solved} / {lcGrandTotal}
                     </span>
                   )}
                 </div>
@@ -437,7 +433,7 @@ const CodingStats = ({ setActiveSection }) => {
                     GitHub Contributions
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
-                    {YEARLY_CONTRIBUTIONS[ghYear].toLocaleString()}{' '}
+                    {(yearlyContributions[ghYear] || 0).toLocaleString()}{' '}
                     contributions in {ghYear}
                   </p>
                 </div>
@@ -491,9 +487,9 @@ const CodingStats = ({ setActiveSection }) => {
                   <p
                     className={`text-lg font-bold ${ghYear === y ? 'text-blue-700 dark:text-blue-300' : 'text-gray-900 dark:text-white'}`}
                   >
-                    {YEARLY_CONTRIBUTIONS[y] >= 1000
-                      ? `${(YEARLY_CONTRIBUTIONS[y] / 1000).toFixed(1)}k`
-                      : YEARLY_CONTRIBUTIONS[y]}
+                    {yearlyContributions[y] >= 1000
+                      ? `${(yearlyContributions[y] / 1000).toFixed(1)}k`
+                      : yearlyContributions[y]}
                   </p>
                   <p className="text-xs text-gray-400 mt-0.5">contributions</p>
                 </button>
