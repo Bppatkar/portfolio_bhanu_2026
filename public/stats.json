@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 10,
+    "currentStreak": 11,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 616
+      "2026": 617
     }
   },
   "leetcode": {
@@ -16,25 +16,25 @@
     "easy": 90,
     "medium": 79,
     "hard": 6,
-    "ranking": 959469,
+    "ranking": 960290,
     "recentSubmissions": [
+      {
+        "title": "Two Sum",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1786540358"
+      },
+      {
+        "title": "Minimum Window Substring",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1786535675"
+      },
       {
         "title": "Minimum Window Substring",
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1786447490"
-      },
-      {
-        "title": "Longest Substring Without Repeating Characters",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1786443458"
-      },
-      {
-        "title": "Continuous Subarray Sum",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1786421863"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 962
     }
   },
-  "lastUpdated": "2026-08-12T02:24:19.670Z"
+  "lastUpdated": "2026-08-13T02:25:23.528Z"
 }
