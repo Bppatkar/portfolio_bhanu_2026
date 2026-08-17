@@ -2,46 +2,46 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 14,
+    "currentStreak": 15,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 623
+      "2026": 624
     }
   },
   "leetcode": {
-    "solved": 177,
-    "easy": 91,
-    "medium": 80,
+    "solved": 179,
+    "easy": 92,
+    "medium": 81,
     "hard": 6,
-    "ranking": 951336,
+    "ranking": 946603,
     "recentSubmissions": [
       {
-        "title": "Permutation in String",
+        "title": "Palindromic Substrings",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1786794627"
+        "timestamp": "1786878221"
       },
       {
-        "title": "Reverse Words in a String",
+        "title": "String Compression",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1786789244"
+        "timestamp": "1786871334"
       },
       {
-        "title": "Reverse Words in a String",
+        "title": "String Compression",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1786788624"
+        "timestamp": "1786871128"
       }
     ],
     "totals": {
-      "easy": 959,
-      "medium": 2101,
-      "hard": 963
+      "easy": 960,
+      "medium": 2103,
+      "hard": 965
     }
   },
-  "lastUpdated": "2026-08-16T01:42:23.050Z"
+  "lastUpdated": "2026-08-17T01:40:15.240Z"
 }
