@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 15,
+    "currentStreak": 16,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 624
+      "2026": 625
     }
   },
   "leetcode": {
@@ -16,8 +16,14 @@
     "easy": 92,
     "medium": 81,
     "hard": 6,
-    "ranking": 946603,
+    "ranking": 941656,
     "recentSubmissions": [
+      {
+        "title": "Palindromic Substrings",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1786951131"
+      },
       {
         "title": "Palindromic Substrings",
         "statusDisplay": "Accepted",
@@ -29,19 +35,13 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1786871334"
-      },
-      {
-        "title": "String Compression",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1786871128"
       }
     ],
     "totals": {
       "easy": 960,
       "medium": 2103,
-      "hard": 965
+      "hard": 966
     }
   },
-  "lastUpdated": "2026-08-17T01:40:15.240Z"
+  "lastUpdated": "2026-08-18T01:36:01.004Z"
 }
