@@ -2,39 +2,39 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 20,
+    "currentStreak": 21,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 629
+      "2026": 630
     }
   },
   "leetcode": {
-    "solved": 183,
+    "solved": 185,
     "easy": 94,
-    "medium": 82,
-    "hard": 7,
-    "ranking": 928024,
+    "medium": 83,
+    "hard": 8,
+    "ranking": 917984,
     "recentSubmissions": [
       {
-        "title": "Number of Recent Calls",
+        "title": "Basic Calculator",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787313222"
+        "timestamp": "1787398277"
       },
       {
-        "title": "Number of Recent Calls",
+        "title": "Sliding Window Maximum",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787313089"
+        "timestamp": "1787380770"
       },
       {
-        "title": "Largest Rectangle in Histogram",
+        "title": "Design Circular Queue",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787287052"
+        "timestamp": "1787375564"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 966
     }
   },
-  "lastUpdated": "2026-08-22T01:34:47.877Z"
+  "lastUpdated": "2026-08-23T01:44:49.333Z"
 }
