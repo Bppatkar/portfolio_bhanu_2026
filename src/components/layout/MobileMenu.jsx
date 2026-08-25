@@ -85,7 +85,7 @@ const MobileMenu = ({
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/bhanu-pratap-patkar/"
+                href="https://www.linkedin.com/in/bppatkar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"

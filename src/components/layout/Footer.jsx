@@ -65,7 +65,7 @@ const Footer = () => {
                 LinkedIn
               </h4>
               <a
-                href="https://www.linkedin.com/in/bhanu-pratap-patkar/"
+                href="https://www.linkedin.com/in/bppatkar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300 text-sm"

@@ -158,12 +158,12 @@ const Contact = ({ setActiveSection }) => {
                     LinkedIn
                   </h4>
                   <a
-                    href="https://www.linkedin.com/in/bhanu-pratap-patkar/"
+                    href="https://www.linkedin.com/in/bppatkar/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 hover:underline transition-colors duration-300"
                   >
-                    linkedin.com/in/bhanu-pratap-patkar
+                    linkedin.com/in/bppatkar
                   </a>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                     Connect with me professionally
