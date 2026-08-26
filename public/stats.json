@@ -2,39 +2,39 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 23,
+    "currentStreak": 24,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 632
+      "2026": 636
     }
   },
   "leetcode": {
-    "solved": 187,
+    "solved": 189,
     "easy": 95,
-    "medium": 84,
+    "medium": 86,
     "hard": 8,
-    "ranking": 908667,
+    "ranking": 898972,
     "recentSubmissions": [
       {
-        "title": "Linked List Cycle II",
+        "title": "Reverse Linked List II",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787588860"
+        "timestamp": "1787673793"
       },
       {
-        "title": "Linked List Cycle II",
+        "title": "Reverse Linked List II",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787587148"
+        "timestamp": "1787673679"
       },
       {
-        "title": "Linked List Cycle II",
+        "title": "Reorder List",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787587132"
+        "timestamp": "1787650153"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 967
     }
   },
-  "lastUpdated": "2026-08-25T01:37:21.880Z"
+  "lastUpdated": "2026-08-26T01:42:10.113Z"
 }
