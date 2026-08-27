@@ -2,39 +2,39 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 24,
+    "currentStreak": 26,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 636
+      "2026": 638
     }
   },
   "leetcode": {
-    "solved": 189,
+    "solved": 191,
     "easy": 95,
-    "medium": 86,
+    "medium": 88,
     "hard": 8,
-    "ranking": 898972,
+    "ranking": 889362,
     "recentSubmissions": [
       {
-        "title": "Reverse Linked List II",
+        "title": "Odd Even Linked List",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787673793"
+        "timestamp": "1787811987"
       },
       {
-        "title": "Reverse Linked List II",
+        "title": "Odd Even Linked List",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1787673679"
+        "timestamp": "1787811842"
       },
       {
-        "title": "Reorder List",
-        "statusDisplay": "Accepted",
+        "title": "Odd Even Linked List",
+        "statusDisplay": "Runtime Error",
         "lang": "javascript",
-        "timestamp": "1787650153"
+        "timestamp": "1787811798"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 967
     }
   },
-  "lastUpdated": "2026-08-26T01:42:10.113Z"
+  "lastUpdated": "2026-08-27T08:38:27.666Z"
 }
