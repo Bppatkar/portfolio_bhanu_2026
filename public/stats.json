@@ -16,8 +16,14 @@
     "easy": 95,
     "medium": 90,
     "hard": 8,
-    "ranking": 875617,
+    "ranking": 876146,
     "recentSubmissions": [
+      {
+        "title": "Search Insert Position",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1787985631"
+      },
       {
         "title": "Binary Search",
         "statusDisplay": "Accepted",
@@ -29,19 +35,13 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1787931275"
-      },
-      {
-        "title": "Sort List",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1787825287"
       }
     ],
     "totals": {
-      "easy": 961,
-      "medium": 2105,
-      "hard": 967
+      "easy": 962,
+      "medium": 2109,
+      "hard": 970
     }
   },
-  "lastUpdated": "2026-08-29T06:37:55.579Z"
+  "lastUpdated": "2026-08-30T04:50:42.983Z"
 }
