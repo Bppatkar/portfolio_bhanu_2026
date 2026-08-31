@@ -2,7 +2,7 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 28,
+    "currentStreak": 0,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
@@ -16,8 +16,14 @@
     "easy": 95,
     "medium": 90,
     "hard": 8,
-    "ranking": 876146,
+    "ranking": 876825,
     "recentSubmissions": [
+      {
+        "title": "Find First and Last Position of Element in Sorted Array",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1788150421"
+      },
       {
         "title": "Search Insert Position",
         "statusDisplay": "Accepted",
@@ -29,12 +35,6 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1787983505"
-      },
-      {
-        "title": "Sort List",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1787931275"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 970
     }
   },
-  "lastUpdated": "2026-08-30T04:50:42.983Z"
+  "lastUpdated": "2026-08-31T04:55:00.111Z"
 }
