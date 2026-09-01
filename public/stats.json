@@ -16,7 +16,7 @@
     "easy": 95,
     "medium": 90,
     "hard": 8,
-    "ranking": 876825,
+    "ranking": 877489,
     "recentSubmissions": [
       {
         "title": "Find First and Last Position of Element in Sorted Array",
@@ -43,5 +43,5 @@
       "hard": 970
     }
   },
-  "lastUpdated": "2026-08-31T04:55:00.111Z"
+  "lastUpdated": "2026-09-01T04:33:46.272Z"
 }
