@@ -16,25 +16,25 @@
     "easy": 97,
     "medium": 95,
     "hard": 10,
-    "ranking": 844119,
+    "ranking": 844589,
     "recentSubmissions": [
+      {
+        "title": "Merge Sorted Array",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1789795283"
+      },
+      {
+        "title": "Sort Colors",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1789792865"
+      },
       {
         "title": "Sort Colors",
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1789790492"
-      },
-      {
-        "title": "Sort Colors",
-        "statusDisplay": "Restrictions Failed",
-        "lang": "javascript",
-        "timestamp": "1789790257"
-      },
-      {
-        "title": "Sort an Array",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1789787139"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 975
     }
   },
-  "lastUpdated": "2026-09-19T04:05:49.103Z"
+  "lastUpdated": "2026-09-20T04:24:49.367Z"
 }
