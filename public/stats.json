@@ -16,25 +16,25 @@
     "easy": 97,
     "medium": 95,
     "hard": 10,
-    "ranking": 849399,
+    "ranking": 849933,
     "recentSubmissions": [
       {
-        "title": "Permutations II",
+        "title": "N-Queens",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790565883"
+        "timestamp": "1790657648"
       },
       {
-        "title": "Permutations II",
+        "title": "Word Search",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790512752"
+        "timestamp": "1790653848"
       },
       {
-        "title": "Letter Combinations of a Phone Number",
+        "title": "N-Queens",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790505714"
+        "timestamp": "1790653577"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 979
     }
   },
-  "lastUpdated": "2026-09-28T04:48:41.397Z"
+  "lastUpdated": "2026-09-29T05:14:11.939Z"
 }
