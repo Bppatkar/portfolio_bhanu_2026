@@ -2,7 +2,7 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 16,
+    "currentStreak": 0,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
@@ -16,25 +16,25 @@
     "easy": 97,
     "medium": 96,
     "hard": 11,
-    "ranking": 841481,
+    "ranking": 841918,
     "recentSubmissions": [
       {
-        "title": "Maximum Depth of Binary Tree",
+        "title": "Path Sum",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790914502"
+        "timestamp": "1790961216"
       },
       {
-        "title": "Binary Tree Preorder Traversal",
+        "title": "Path Sum",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790914202"
+        "timestamp": "1790948302"
       },
       {
-        "title": "Maximum Depth of Binary Tree",
+        "title": "Path Sum",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1790871863"
+        "timestamp": "1790947556"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 979
     }
   },
-  "lastUpdated": "2026-10-02T05:03:48.961Z"
+  "lastUpdated": "2026-10-03T04:47:17.920Z"
 }
