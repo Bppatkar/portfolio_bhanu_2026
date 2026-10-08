@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 1,
+    "currentStreak": 3,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 674
+      "2026": 677
     }
   },
   "leetcode": {
@@ -16,25 +16,25 @@
     "easy": 97,
     "medium": 96,
     "hard": 11,
-    "ranking": 844141,
+    "ranking": 844672,
     "recentSubmissions": [
       {
-        "title": "Subtree of Another Tree",
+        "title": "Count Good Nodes in Binary Tree",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791304805"
+        "timestamp": "1791433833"
       },
       {
-        "title": "Subtree of Another Tree",
-        "statusDisplay": "Wrong Answer",
+        "title": "Binary Tree Right Side View",
+        "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791304626"
+        "timestamp": "1791431939"
       },
       {
-        "title": "Subtree of Another Tree",
-        "statusDisplay": "Wrong Answer",
+        "title": "Binary Tree Right Side View",
+        "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791303699"
+        "timestamp": "1791390986"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 980
     }
   },
-  "lastUpdated": "2026-10-07T05:22:24.317Z"
+  "lastUpdated": "2026-10-08T05:31:11.945Z"
 }
