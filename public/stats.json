@@ -2,39 +2,39 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 3,
+    "currentStreak": 4,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 677
+      "2026": 680
     }
   },
   "leetcode": {
-    "solved": 204,
+    "solved": 207,
     "easy": 97,
-    "medium": 96,
-    "hard": 11,
-    "ranking": 844672,
+    "medium": 98,
+    "hard": 12,
+    "ranking": 840255,
     "recentSubmissions": [
       {
-        "title": "Count Good Nodes in Binary Tree",
+        "title": "Validate Binary Search Tree",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791433833"
+        "timestamp": "1791522669"
       },
       {
-        "title": "Binary Tree Right Side View",
+        "title": "Validate Binary Search Tree",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791431939"
+        "timestamp": "1791522627"
       },
       {
-        "title": "Binary Tree Right Side View",
+        "title": "Serialize and Deserialize Binary Tree",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1791390986"
+        "timestamp": "1791457574"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 980
     }
   },
-  "lastUpdated": "2026-10-08T05:31:11.945Z"
+  "lastUpdated": "2026-10-09T05:35:22.090Z"
 }
