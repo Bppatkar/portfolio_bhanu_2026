@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 5,
+    "currentStreak": 6,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 682
+      "2026": 683
     }
   },
   "leetcode": {
@@ -16,8 +16,14 @@
     "easy": 97,
     "medium": 98,
     "hard": 12,
-    "ranking": 831066,
+    "ranking": 831486,
     "recentSubmissions": [
+      {
+        "title": "Populating Next Right Pointers in Each Node",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1791695420"
+      },
       {
         "title": "Lowest Common Ancestor of a Binary Search Tree",
         "statusDisplay": "Accepted",
@@ -29,12 +35,6 @@
         "statusDisplay": "Wrong Answer",
         "lang": "javascript",
         "timestamp": "1791606393"
-      },
-      {
-        "title": "Kth Smallest Element in a BST",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1791606183"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 980
     }
   },
-  "lastUpdated": "2026-10-10T05:19:38.711Z"
+  "lastUpdated": "2026-10-11T05:10:39.892Z"
 }
