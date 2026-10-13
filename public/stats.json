@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 6,
+    "currentStreak": 8,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 684
+      "2026": 687
     }
   },
   "leetcode": {
@@ -16,8 +16,14 @@
     "easy": 97,
     "medium": 98,
     "hard": 12,
-    "ranking": 832078,
+    "ranking": 832544,
     "recentSubmissions": [
+      {
+        "title": "Populating Next Right Pointers in Each Node II",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1791783603"
+      },
       {
         "title": "Populating Next Right Pointers in Each Node",
         "statusDisplay": "Accepted",
@@ -29,12 +35,6 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1791606443"
-      },
-      {
-        "title": "Lowest Common Ancestor of a Binary Search Tree",
-        "statusDisplay": "Wrong Answer",
-        "lang": "javascript",
-        "timestamp": "1791606393"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 982
     }
   },
-  "lastUpdated": "2026-10-12T05:24:11.525Z"
+  "lastUpdated": "2026-10-13T06:22:21.373Z"
 }
