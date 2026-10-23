@@ -12,29 +12,29 @@
     }
   },
   "leetcode": {
-    "solved": 209,
+    "solved": 210,
     "easy": 97,
-    "medium": 98,
+    "medium": 99,
     "hard": 14,
-    "ranking": 826935,
+    "ranking": 827387,
     "recentSubmissions": [
+      {
+        "title": "Gas Station",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1792670065"
+      },
+      {
+        "title": "Gas Station",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1792668061"
+      },
       {
         "title": "Task Scheduler",
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1792564002"
-      },
-      {
-        "title": "Task Scheduler",
-        "statusDisplay": "Runtime Error",
-        "lang": "javascript",
-        "timestamp": "1792563972"
-      },
-      {
-        "title": "Task Scheduler",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1792563391"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 984
     }
   },
-  "lastUpdated": "2026-10-22T04:10:31.574Z"
+  "lastUpdated": "2026-10-23T04:14:19.218Z"
 }
