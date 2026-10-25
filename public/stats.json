@@ -8,40 +8,40 @@
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 711
+      "2026": 712
     }
   },
   "leetcode": {
-    "solved": 211,
+    "solved": 212,
     "easy": 97,
     "medium": 100,
-    "hard": 14,
-    "ranking": 822907,
+    "hard": 15,
+    "ranking": 814042,
     "recentSubmissions": [
       {
-        "title": "Car Pooling",
+        "title": "Candy",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1792814121"
+        "timestamp": "1792898050"
       },
       {
-        "title": "Car Pooling",
-        "statusDisplay": "Wrong Answer",
-        "lang": "javascript",
-        "timestamp": "1792813555"
-      },
-      {
-        "title": "Gas Station",
+        "title": "Candy",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1792670065"
+        "timestamp": "1792842169"
+      },
+      {
+        "title": "Candy",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1792840239"
       }
     ],
     "totals": {
-      "easy": 972,
-      "medium": 2131,
-      "hard": 984
+      "easy": 974,
+      "medium": 2135,
+      "hard": 986
     }
   },
-  "lastUpdated": "2026-10-24T04:05:33.862Z"
+  "lastUpdated": "2026-10-25T04:07:44.170Z"
 }
