@@ -2,39 +2,39 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 1,
+    "currentStreak": 2,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 712
+      "2026": 716
     }
   },
   "leetcode": {
-    "solved": 212,
+    "solved": 215,
     "easy": 97,
-    "medium": 100,
+    "medium": 103,
     "hard": 15,
-    "ranking": 814042,
+    "ranking": 801002,
     "recentSubmissions": [
       {
-        "title": "Candy",
+        "title": "Hand of Straights",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1792898050"
+        "timestamp": "1792909047"
       },
       {
-        "title": "Candy",
+        "title": "Queue Reconstruction by Height",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1792842169"
+        "timestamp": "1792907084"
       },
       {
-        "title": "Candy",
+        "title": "Minimum Number of Arrows to Burst Balloons",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1792840239"
+        "timestamp": "1792903143"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 986
     }
   },
-  "lastUpdated": "2026-10-25T04:07:44.170Z"
+  "lastUpdated": "2026-10-26T04:11:42.755Z"
 }
