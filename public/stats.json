@@ -2,7 +2,7 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 4,
+    "currentStreak": 0,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
@@ -12,29 +12,29 @@
     }
   },
   "leetcode": {
-    "solved": 219,
+    "solved": 220,
     "easy": 99,
-    "medium": 105,
+    "medium": 106,
     "hard": 15,
-    "ranking": 792845,
+    "ranking": 784455,
     "recentSubmissions": [
       {
-        "title": "House Robber II",
-        "statusDisplay": "Accepted",
+        "title": "Coin Change",
+        "statusDisplay": "Time Limit Exceeded",
         "lang": "javascript",
-        "timestamp": "1793159834"
+        "timestamp": "1793249797"
       },
       {
-        "title": "House Robber",
+        "title": "Coin Change",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1793116670"
+        "timestamp": "1793247265"
       },
       {
-        "title": "House Robber",
+        "title": "Coin Change",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1793116188"
+        "timestamp": "1793246930"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 986
     }
   },
-  "lastUpdated": "2026-10-28T05:02:39.734Z"
+  "lastUpdated": "2026-10-29T05:15:19.441Z"
 }
