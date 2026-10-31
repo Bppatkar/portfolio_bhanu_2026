@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 113,
     "followers": 2,
-    "currentStreak": 1,
+    "currentStreak": 2,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 720
+      "2026": 722
     }
   },
   "leetcode": {
@@ -16,25 +16,25 @@
     "easy": 99,
     "medium": 106,
     "hard": 15,
-    "ranking": 780429,
+    "ranking": 780824,
     "recentSubmissions": [
       {
-        "title": "Palindromic Substrings",
+        "title": "Longest Palindromic Substring",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1793334043"
+        "timestamp": "1793353366"
       },
       {
-        "title": "Coin Change",
+        "title": "Longest Palindromic Substring",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1793353004"
+      },
+      {
+        "title": "Longest Palindromic Substring",
         "statusDisplay": "Wrong Answer",
         "lang": "javascript",
-        "timestamp": "1793294007"
-      },
-      {
-        "title": "Coin Change",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1793250964"
+        "timestamp": "1793352889"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 986
     }
   },
-  "lastUpdated": "2026-10-30T05:14:59.917Z"
+  "lastUpdated": "2026-10-31T04:58:16.146Z"
 }
