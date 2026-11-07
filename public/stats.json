@@ -16,25 +16,25 @@
     "easy": 99,
     "medium": 107,
     "hard": 15,
-    "ranking": 778648,
+    "ranking": 778954,
     "recentSubmissions": [
+      {
+        "title": "Decode Ways",
+        "statusDisplay": "Wrong Answer",
+        "lang": "javascript",
+        "timestamp": "1794028660"
+      },
+      {
+        "title": "Decode Ways",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1794025702"
+      },
       {
         "title": "Decode Ways",
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1793762289"
-      },
-      {
-        "title": "Longest Palindromic Substring",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1793353366"
-      },
-      {
-        "title": "Longest Palindromic Substring",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1793353004"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 987
     }
   },
-  "lastUpdated": "2026-11-06T05:58:01.373Z"
+  "lastUpdated": "2026-11-07T05:29:41.885Z"
 }
