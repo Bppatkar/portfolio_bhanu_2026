@@ -2,46 +2,46 @@
   "github": {
     "publicRepos": 115,
     "followers": 2,
-    "currentStreak": 3,
+    "currentStreak": 4,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 740
+      "2026": 743
     }
   },
   "leetcode": {
-    "solved": 226,
+    "solved": 227,
     "easy": 99,
-    "medium": 112,
+    "medium": 113,
     "hard": 15,
-    "ranking": 769344,
+    "ranking": 757172,
     "recentSubmissions": [
       {
-        "title": "Coin Change II",
+        "title": "Unique Paths",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1794894553"
+        "timestamp": "1794974583"
       },
       {
-        "title": "Coin Change II",
+        "title": "Unique Paths",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1794894252"
+        "timestamp": "1794909658"
       },
       {
-        "title": "Partition Equal Subset Sum",
+        "title": "Unique Paths",
         "statusDisplay": "Accepted",
         "lang": "javascript",
-        "timestamp": "1794889039"
+        "timestamp": "1794909163"
       }
     ],
     "totals": {
       "easy": 976,
       "medium": 2148,
-      "hard": 990
+      "hard": 991
     }
   },
-  "lastUpdated": "2026-11-17T07:27:30.766Z"
+  "lastUpdated": "2026-11-18T06:51:27.682Z"
 }
