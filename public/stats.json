@@ -8,7 +8,7 @@
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 744
+      "2026": 745
     }
   },
   "leetcode": {
@@ -16,8 +16,14 @@
     "easy": 99,
     "medium": 113,
     "hard": 15,
-    "ranking": 757470,
+    "ranking": 757761,
     "recentSubmissions": [
+      {
+        "title": "Decode Ways",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1795088884"
+      },
       {
         "title": "Unique Paths",
         "statusDisplay": "Accepted",
@@ -29,12 +35,6 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1794909658"
-      },
-      {
-        "title": "Unique Paths",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1794909163"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 991
     }
   },
-  "lastUpdated": "2026-11-19T06:52:51.643Z"
+  "lastUpdated": "2026-11-20T06:42:05.518Z"
 }
