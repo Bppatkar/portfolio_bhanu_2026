@@ -2,7 +2,7 @@
   "github": {
     "publicRepos": 115,
     "followers": 2,
-    "currentStreak": 1,
+    "currentStreak": 0,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
@@ -16,8 +16,14 @@
     "easy": 99,
     "medium": 113,
     "hard": 15,
-    "ranking": 758304,
+    "ranking": 758665,
     "recentSubmissions": [
+      {
+        "title": "Maximum Subarray",
+        "statusDisplay": "Accepted",
+        "lang": "javascript",
+        "timestamp": "1795410012"
+      },
       {
         "title": "Missing Number",
         "statusDisplay": "Accepted",
@@ -29,12 +35,6 @@
         "statusDisplay": "Accepted",
         "lang": "javascript",
         "timestamp": "1795278425"
-      },
-      {
-        "title": "Decode Ways",
-        "statusDisplay": "Accepted",
-        "lang": "javascript",
-        "timestamp": "1795088884"
       }
     ],
     "totals": {
@@ -43,5 +43,5 @@
       "hard": 993
     }
   },
-  "lastUpdated": "2026-11-22T06:03:12.843Z"
+  "lastUpdated": "2026-11-23T06:55:24.700Z"
 }
