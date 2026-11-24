@@ -2,13 +2,13 @@
   "github": {
     "publicRepos": 115,
     "followers": 2,
-    "currentStreak": 0,
+    "currentStreak": 1,
     "longestStreak": 56,
     "yearlyContributions": {
       "2023": 37,
       "2024": 222,
       "2025": 1380,
-      "2026": 746
+      "2026": 747
     }
   },
   "leetcode": {
@@ -16,7 +16,7 @@
     "easy": 99,
     "medium": 113,
     "hard": 15,
-    "ranking": 758665,
+    "ranking": 758981,
     "recentSubmissions": [
       {
         "title": "Maximum Subarray",
@@ -43,5 +43,5 @@
       "hard": 993
     }
   },
-  "lastUpdated": "2026-11-23T06:55:24.700Z"
+  "lastUpdated": "2026-11-24T09:21:52.169Z"
 }
